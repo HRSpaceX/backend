@@ -15,12 +15,6 @@ class Account(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL,
                                 on_delete=models.CASCADE,
                                 verbose_name='Пользователь')
-    patronymic = models.CharField(
-        max_length=50,
-        blank=False,
-        null=False,
-        verbose_name='Отчество'
-    )
     phone = models.CharField(
         max_length=17,
         blank=False,
@@ -43,4 +37,8 @@ class Account(models.Model):
 
 
 class Company(models.Model):
+    ...
+
+
+class HeadHunter(models.Model):
     ...
