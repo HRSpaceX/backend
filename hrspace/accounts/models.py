@@ -33,12 +33,28 @@ class Account(models.Model):
         verbose_name_plural = 'Аккаунты'
 
     def __str__(self) -> str:
-        return f'Аккаунт {self.user.first_name} {self.patronymic}'
+        return f'Аккаунт {self.user.first_name} {self.user.second_name}'
 
 
 class Company(models.Model):
-    ...
+    """Модель Компании и Кадрового Агенства"""
+    account = models.ForeignKey(
+        Account,
+        on_delete=models.CASCADE,
+        related_name='account',
+        verbose_name='Аккаунт'
+    )
+    name = models.CharField(
+        max_length=50,
+        verbose_name='Название'
+    )
 
 
 class HeadHunter(models.Model):
-    ...
+    """Модель Рекрутера"""
+    account = models.ForeignKey(
+        Account,
+        on_delete=models.CASCADE,
+        related_name='account',
+        verbose_name='Аккаунт'
+    )
