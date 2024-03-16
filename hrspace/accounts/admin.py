@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from typing import Any
 
 from django.contrib import admin
@@ -7,6 +8,7 @@ from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.forms import UserChangeForm
 from django.db.models.query import QuerySet
 from django.http import HttpRequest
+
 from accounts.models import Account, Company, HeadHunter, HeadHunterAgency
 
 User = get_user_model()
