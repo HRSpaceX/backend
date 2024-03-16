@@ -10,6 +10,13 @@ class Limits(IntEnum):
     NAME_MAX_LEN: int = 100
 
 
+class AccLimits(IntEnum):
+    """Лимиты для моделей приложения accounts"""
+    PHONE_MAX_LEN: int = 17
+    ROLE_MAX_LEN: int = 18
+    NAME_MAX_LEN: int = 50
+
+
 BENEFITS_PACKAGE_LENGTH = 200
 BUSINESS_TRIP_LENGTH = 50
 EDUCATION_LENGTH = 50
