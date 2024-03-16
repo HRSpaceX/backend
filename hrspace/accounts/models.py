@@ -1,7 +1,8 @@
 from django.db import models
-
+from django.contrib.auth import get_user_model
 from core.constants import AccLimits
-from django.conf import settings
+
+User = get_user_model()
 
 
 class Account(models.Model):
@@ -14,13 +15,15 @@ class Account(models.Model):
         HH_AGENCY = 'AH', 'Кадровое Агенство',
         COMPANY = 'СO', 'Компания'
 
-    user = models.OneToOneField(settings.AUTH_USER_MODEL,
+    user = models.OneToOneField(User,
                                 on_delete=models.CASCADE,
                                 verbose_name='Пользователь')
     phone = models.CharField(
         max_length=AccLimits.PHONE_MAX_LEN.value,
         blank=False,
         null=False,
+        unique=True,
+        verbose_name='Номер телефона'
     )
     role = models.CharField(
         max_length=AccLimits.ROLE_MAX_LEN.value,
@@ -39,7 +42,8 @@ class Account(models.Model):
 
 
 class Company(models.Model):
-    """Модель Компании"""
+    """Модель Компании, расширяющая модель
+    Аккаунта с помощью подключения OneToOne."""
     account = models.OneToOneField(
         'Account',
         on_delete=models.CASCADE,
@@ -53,7 +57,8 @@ class Company(models.Model):
 
 
 class HeadHunter(models.Model):
-    """Модель Рекрутера"""
+    """Модель Рекрутера, расширяющая модель
+    Аккаунта с помощью подключения OneToOne."""
     account = models.OneToOneField(
         'Account',
         on_delete=models.CASCADE,
@@ -63,7 +68,8 @@ class HeadHunter(models.Model):
 
 
 class HeadHunterAgency(models.Model):
-    """Модель кадрового агентсва"""
+    """Модель Кадрового Агенства, расширяющая модель
+    Аккаунта с помощью подключения OneToOne."""
     account = models.OneToOneField(
         'Account',
         on_delete=models.CASCADE,
