@@ -1,12 +1,14 @@
-from core.constants import (BENEFITS_PACKAGE_CHOICES, BUSINESS_TRIP_CHOICES,
-                            EDUCATION_CHOICES, EMPLOYMENT_CHOICES,
-                            HR_RESPONSIBILITY_CHOICES,
-                            INFO_CANDIDATES_CHOICES, PAYMENT_CHOICES,
-                            PORTFOLIO_CHOICES, Limits,
-                            WORK_EXPERIENCE_CHOICES, WORK_FORMAT_CHOICES)
 from django.core.validators import (MaxValueValidator, MinValueValidator,
                                     RegexValidator)
 from django.db import models
+
+from core.constants import (BENEFITS_PACKAGE_CHOICES, BUSINESS_TRIP_CHOICES,
+                            CITY_CHOICES, EDUCATION_CHOICES,
+                            EMPLOYMENT_CHOICES, HR_RESPONSIBILITY_CHOICES,
+                            INFO_CANDIDATES_CHOICES, PAYMENT_CHOICES,
+                            PORTFOLIO_CHOICES, PROFESSION_CHOICES,
+                            WORK_EXPERIENCE_CHOICES, WORK_FORMAT_CHOICES,
+                            Limits)
 
 
 class Profession(models.Model):
@@ -14,8 +16,7 @@ class Profession(models.Model):
     name = models.CharField(
         max_length=Limits.NAME_MAX_LEN.value,
         # поменять на скрипт загрузки из файла в БД #
-        # choices=PROFESSION_CHOICES,
-        # ------------------------------------------#
+        choices=PROFESSION_CHOICES,
         verbose_name='Профессия'
     )
 
@@ -33,7 +34,7 @@ class City(models.Model):
     name = models.CharField(
         max_length=Limits.NAME_MAX_LEN.value,
         # добавить скрипт загрузки данных из файла в БД #
-        # choices=CITY_CHOICES,
+        choices=CITY_CHOICES,
         verbose_name='Город'
     )
 
