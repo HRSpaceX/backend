@@ -8,19 +8,22 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+# SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = 'django-insecure-*u4*)fdablf@xe3x)w^^=357(@nvrj=*mpe#1xo26p3*y4u-dd'
 
-DEBUG = os.getenv('DEBUG')
+DEBUG = True
+# DEBUG = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = json.loads(os.getenv('ALLOWED_HOSTS'))
+ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = json.loads(os.getenv('ALLOWED_HOSTS'))
 
 
-CORS_ALLOWED_ORIGINS = [
-    f'http://{ALLOWED_HOSTS[0]}:3000',
-    f'http://{ALLOWED_HOSTS[0]}:3000',
-    f'https://{ALLOWED_HOSTS[1]}:3000',
-    f'https://{ALLOWED_HOSTS[1]}:3000',
-]
+# CORS_ALLOWED_ORIGINS = [
+    # f'http://{ALLOWED_HOSTS[0]}:3000',
+    # f'http://{ALLOWED_HOSTS[0]}:3000',
+    # f'https://{ALLOWED_HOSTS[1]}:3000',
+    # 3f'https://{ALLOWED_HOSTS[1]}:3000',
+# ]
 
 CORS_ALLOW_ALL_ORIGINS: True  # потом уберём
 
