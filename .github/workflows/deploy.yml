@@ -3,7 +3,7 @@ name: hr_2
 on:
   push:
     branches:
-      - s/feat/23_deploy_off
+      - s/feat/deploy
 
 jobs:
   tests:
@@ -60,7 +60,7 @@ jobs:
           tags: ${{ secrets.DOCKER_USERNAME }}/nginx_vi:latest
 
   deploy:
-    if: github.ref == 'refs/heads/s/feat/23_deploy'
+    if: github.ref == 'refs/heads/s/feat/deploy'
     runs-on: ubuntu-latest
     needs:
       build_and_push_to_docker_hub

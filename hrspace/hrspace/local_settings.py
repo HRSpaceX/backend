@@ -1,4 +1,5 @@
 import os
+import json
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -7,16 +8,22 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# SECRET_KEY = os.getenv('SECRET_KEY')
 SECRET_KEY = 'django-insecure-*u4*)fdablf@xe3x)w^^=357(@nvrj=*mpe#1xo26p3*y4u-dd'
 
 DEBUG = True
+# DEBUG = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = ["188.120.225.117", "devinse.store"]
+ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = json.loads(os.getenv('ALLOWED_HOSTS'))
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-]
+
+# CORS_ALLOWED_ORIGINS = [
+    # f'http://{ALLOWED_HOSTS[0]}:3000',
+    # f'http://{ALLOWED_HOSTS[0]}:3000',
+    # f'https://{ALLOWED_HOSTS[1]}:3000',
+    # 3f'https://{ALLOWED_HOSTS[1]}:3000',
+# ]
 
 CORS_ALLOW_ALL_ORIGINS: True  # потом уберём
 
@@ -37,7 +44,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    "corsheaders.middleware.CorsMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -66,15 +73,20 @@ TEMPLATES = [
 WSGI_APPLICATION = 'hrspace.wsgi.application'
 
 DATABASES = {
-    "default": {
-        "ENGINE": os.getenv("DB_ENGINE", default="django.db.backends.postgresql"),
-        "NAME": os.getenv("DB_NAME", default="postgres"),
-        "USER": os.getenv("POSTGRES_USER", default="postgres"),
-        "PASSWORD": os.getenv("POSTGRES_PASSWORD", default="postgres"),
-        "HOST": os.getenv("DB_HOST", default="db"),
-        "PORT": os.getenv("DB_PORT", default="5432"),
+    'dev': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+    'product': {
+        'ENGINE': os.getenv('DB_ENGINE', default='django.db.backends.postgresql'),
+        'NAME': os.getenv('DB_NAME', default='postgres'),
+        'USER': os.getenv('POSTGRES_USER', default='postgres'),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD', default='postgres'),
+        'HOST': os.getenv('DB_HOST', default='db'),
+        'PORT': os.getenv('DB_PORT', default='5432'),
     }
 }
+DATABASES['default'] = DATABASES['dev' if DEBUG else 'product']
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -116,6 +128,6 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
