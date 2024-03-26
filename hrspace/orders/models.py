@@ -35,7 +35,7 @@ class City(models.Model):
     name = models.CharField(
         max_length=Limits.NAME_MAX_LEN.value,
         blank=False,
-        unique=True,
+        # unique=True,
         verbose_name='Город'
     )
 
