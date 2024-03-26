@@ -1,5 +1,5 @@
 import os
-import json
+# import json
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -16,8 +16,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 # ALLOWED_HOSTS = json.loads(os.getenv('ALLOWED_HOSTS'))
-
-
 # CORS_ALLOWED_ORIGINS = [
     # f'http://{ALLOWED_HOSTS[0]}:3000',
     # f'http://{ALLOWED_HOSTS[0]}:3000',
