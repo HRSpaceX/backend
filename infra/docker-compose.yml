@@ -18,7 +18,8 @@ services:
     restart: always
     env_file: .env
     volumes:
-      - static:/static/
+      # - static:/static/
+      - static:/app/static/
     depends_on:
       - db
 
