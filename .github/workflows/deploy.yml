@@ -57,7 +57,7 @@ jobs:
           context: ./infra
           file: ./infra/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/nginx_vi:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/nginx_hr:latest
 
   deploy:
     if: github.ref == 'refs/heads/s/feat/deploy'
