@@ -3,7 +3,7 @@ name: hr_2
 on:
   push:
     branches:
-      - s/feat/23_deploy_off
+      - s/feat/23_deploy
 
 jobs:
   tests:
@@ -42,7 +42,15 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          
+
+      - name: push frontend to Docker Hub
+        uses: docker/build-push-action@v4
+        with:
+          context: ./frontend
+          file: ./frontend/Dockerfile
+          push: true
+          tags: ${{ secrets.DOCKER_USERNAME }}/frontend_hr:latest
+
       - name: Push backend to DockerHub
         uses: docker/build-push-action@v4
         with:

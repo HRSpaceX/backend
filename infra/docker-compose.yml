@@ -21,6 +21,15 @@ services:
     depends_on:
       - db
 
+  frontend:
+    container_name: frontend
+    env_file: .env
+    image: devinse/frontend_hr
+    volumes:
+      - ./frontend/:/app/result_build/
+    depends_on:
+      - backend
+
   nginx:
     container_name: nginx
     env_file: .env
@@ -31,4 +40,5 @@ services:
     depends_on:
       - backend
     volumes:
+      - ./frontend/build/:/usr/share/nginx/html
       - static:/etc/nginx/html/static/
