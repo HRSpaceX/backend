@@ -6,3 +6,6 @@ RUN npm install
 COPY . ./
 RUN npm run build
 CMD cp -r build result_build
+
+
+# RUN npm install --only=production && npm cache clean --force && npm install -g typescript
