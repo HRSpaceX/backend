@@ -1,0 +1,63 @@
+.home__container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.home__input-container {
+  justify-content: center;
+  align-items: center;
+  margin: 208px auto 0;
+  box-sizing: border-box;
+}
+
+.home__title {
+  color: var(--Gray-80, #303233);
+  font-family: "Proxima Nova";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 42px;
+  align-self: flex-start;
+  margin: 0 0 13px;
+  padding-left: 8px;
+}
+
+.home__input {
+  display: flex;
+  width: 552px;
+  box-sizing: border-box;
+  height: 48px;
+  padding-left: 16px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--Gray-30, #d4d7d9);
+  background: var(--White-10, #fff);
+  margin-bottom: 8px;
+}
+
+.home__input:focus {
+  outline: 1px solid #71A2FF;
+}
+
+.home__input_error {
+  border: 1px solid #EC3C3C;
+}
+
+.home__error {
+  display: block;
+  min-height: 17px;
+  color: #EC3C3C;
+  font-family: Arial;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  margin: 0;
+}
+
+.home__button {
+  margin: 34px auto 0;
+}

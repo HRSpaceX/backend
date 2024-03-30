@@ -1,0 +1,70 @@
+.progress-bar {
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 64px 0;
+}
+
+.progress-bar__title {
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  font-family: 'Proxima Nova';
+  font-size: 28px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 42px;
+}
+
+.progress-bar__menu {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Proxima Nova';
+}
+
+.progress-bar__links {
+  padding-left: 0;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 67px;
+  margin: 17px 0;
+}
+
+.progress-bar__link {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: #BABDBF;
+}
+
+.progress-bar__link_active {
+  color: #71A2FF;
+}
+
+.progress-bar__step {
+  text-decoration: none;
+  color: #71A2FF;
+}
+
+.progress-bar__step:visited {
+  color: #71A2FF;
+}
+
+.progress-bar__line {
+  display: block;
+  width: 276px;
+  min-height: 8px;
+  border-radius: 2px;
+  background-color: #BABDBF;
+  margin-bottom: 16px;
+}
+
+.progress-bar__line_active {
+  background-color: #71A2FF;
+}

@@ -1,0 +1,80 @@
+.interview-date__container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-left: 172px;
+}
+
+.interview-date__calendar-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.interview-date__calendar-image {
+  margin-top: -4px;
+  cursor: pointer;
+}
+
+.interview-date__input {
+  box-sizing: border-box;
+  display: flex;
+  width: 320px;
+  height: 48px;
+  padding-left: 16px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--Gray-30, #d4d7d9);
+  background: var(--White-10, #fff);
+  margin-bottom: 5px;
+  margin-right: 20px;
+}
+
+.interview-date__current {
+  margin-bottom: 100px;
+}
+
+::placeholder {
+  color: var(--Gray-80, #303233);
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.interview-date__input:focus {
+  outline: 1px solid #71A2FF;
+}
+
+.interview-date__input_error {
+  border: 1px solid #EC3C3C;
+}
+
+.interview-date__error {
+  display: block;
+  min-height: 17px;
+  color: #EC3C3C;
+  font-family: Arial;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  margin: 0 0 10px 0;
+}
+
+.interview-date__text {
+  color: #303233;
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.interview-date__button {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}

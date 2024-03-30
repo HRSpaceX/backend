@@ -1,0 +1,30 @@
+.recruiters-tasks__container {
+  display: flex;
+  flex-direction: column;
+  margin: 65px 0 0 179px;
+}
+
+.recruiters-tasks__checkbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.recruiters-tasks__error {
+  color: #ec3c3c;
+  font-family: Arial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: -3px 0 0 15px;
+}
+
+.recruiters-tasks__current {
+  margin-bottom: 100px;
+}
+
+.recruiters-tasks__button {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}

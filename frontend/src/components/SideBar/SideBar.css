@@ -1,0 +1,54 @@
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  position: absolute;
+  max-width: 400px;
+  margin: 44px 0 0 44px;
+}
+
+.side-bar__link {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  color: #BABDBF;
+  width: 400px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 8px;
+  font-family: Arial;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 20px 13px;
+  margin: 4px 0;
+}
+
+.side-bar__link:after {
+  content: '';
+  background-image: url(../../images/sidebararrow_grey.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 20px;
+  width: 20px;
+  padding-bottom: 4px;
+}
+
+.side-bar__link:visited {
+  color: #303233;
+}
+
+/* не работает цвет стрелки*/
+.side-bar__link:visited+.side-bar__link:after {
+  content: '';
+  background-image: url(../../images/sidebararrow_black.svg);
+}
+
+.side-bar__link:hover {
+  background-color: #E1E8FD;
+}
+
+.side-bar__link_active {
+  background-color: #E1E8FD;
+}

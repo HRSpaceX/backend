@@ -1,0 +1,31 @@
+.employment-type__container {
+  display: flex;
+  flex-direction: column;
+  margin: 52px 0 0 176px;
+}
+
+.employment-type__radiobuttons {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -3px;
+}
+
+.employment-type__error {
+  color: #ec3c3c;
+  font-family: Arial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 0 15px;
+}
+
+.employment-type__current {
+  margin-bottom: 100px;
+}
+
+.employment-type__button {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}

@@ -1,0 +1,33 @@
+.notfound {
+  max-width: 1440px;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.notfound__title {
+  margin: 0;
+  padding-top: 150px;
+  font-weight: 400;
+  font-size: 140px;
+  line-height: 170px;
+}
+
+.notfound__text {
+  margin: 0;
+  padding-top: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+}
+
+.notfound__link {
+  margin: 0;
+  padding-top: 100px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #3456F3;
+  text-align: center;
+}

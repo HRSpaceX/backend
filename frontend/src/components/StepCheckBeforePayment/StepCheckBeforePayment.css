@@ -1,0 +1,38 @@
+.payment-check__container {
+  display: flex;
+  flex-direction: column;
+  margin: 45px auto 0;
+  max-width: 780px;
+}
+
+.payment-check__title {
+  color: #303233;
+  font-family: "Proxima Nova";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  text-align: center;
+  margin: 0;
+}
+
+.payment-check__current {
+  margin-bottom: 100px;
+}
+
+.payment-check__checkbox {
+  margin-top: 36px;
+}
+
+.payment-check__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.payment-check__button {
+  display: flex;
+  flex-direction: row;
+  margin: 68px 0 0 0;
+  gap: 21px;
+}

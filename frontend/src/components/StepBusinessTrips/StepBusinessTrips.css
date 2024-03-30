@@ -1,0 +1,30 @@
+.business-trips__container {
+  display: flex;
+  flex-direction: column;
+  margin: 52px 0 0 176px;
+}
+
+.business-trips__radiobuttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.business-trips__error {
+  color: #ec3c3c;
+  font-family: Arial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 0 15px;
+}
+
+.business-trips__current {
+  margin-bottom: 100px;
+}
+
+.business-trips__button {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}

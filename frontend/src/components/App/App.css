@@ -1,0 +1,32 @@
+/* @import url(../../vendor/normalize.css); */
+@import url(../../vendor/fonts/fonts.css);
+
+:root {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  ;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0;
+}
+
+.form {
+  max-width: 952px;
+  min-height: 696px;
+  width: 952px;
+  display: flex;
+  position: absolute;
+  right: 0;
+  margin-right: 44px;
+}
+
+.form_fullpage {
+  max-width: 100%;
+  width: 1352px;
+  margin-left: 44px;
+}

@@ -1,0 +1,65 @@
+.working-hours__container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 49px;
+  margin-left: 172px;
+}
+
+.working-hours__inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 100%;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.working-hours__input {
+  box-sizing: border-box;
+  display: flex;
+  min-width: 320px;
+  height: 48px;
+  padding-left: 16px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--Gray-30, #d4d7d9);
+  background: var(--White-10, #fff);
+}
+
+.working-hours__input:focus {
+  outline: 1px solid #71A2FF;
+}
+
+.working-hours__input_error {
+  border: 1px solid #EC3C3C;
+}
+
+
+.working-hours__radiobuttons {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+  margin-bottom: -3px;
+}
+
+.working-hours__current {
+  margin-bottom: 100px;
+}
+
+.working-hours__error {
+  color: #ec3c3c;
+  font-family: Arial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 0 19px;
+}
+
+.working-hours__button {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}

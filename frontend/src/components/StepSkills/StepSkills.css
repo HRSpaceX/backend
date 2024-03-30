@@ -1,0 +1,88 @@
+.skills__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 780px;
+  margin-top: 50px;
+  margin-left: 177px;
+}
+
+.skills__input {
+  display: flex;
+  box-sizing: border-box;
+  width: 552px;
+  height: 48px;
+  padding-left: 16px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--Blue-50, #71a2ff);
+  background: var(--White-10, #fff);
+  margin-bottom: 6px;
+}
+
+.skills__input:focus {
+  outline: 1px solid #71A2FF;
+}
+
+.skills__input_error {
+  border: 1px solid #EC3C3C;
+}
+
+.skills__error {
+  display: block;
+  min-height: 17px;
+  color: #EC3C3C;
+  font-family: Arial;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  margin: 0 0 15px 0;
+}
+
+.skills__chips-container {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills__chip {
+  display: flex;
+  padding: 6px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--Blue-Violet-blue-40, #cfd8fa);
+}
+
+.skills__current {
+  margin-bottom: 100px;
+}
+
+.skills__chip-selected {
+  display: flex;
+  height: 101px;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  margin-bottom: 21px;
+  border-radius: 4px;
+  border: var(--Blue-Violet-blue-10, #e1e8fd);
+}
+
+.skills__current {
+  margin-top: 88px;
+}
+
+
+.skills__button {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
