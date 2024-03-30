@@ -119,7 +119,7 @@ SPECTACULAR_SETTINGS = {
 }
 
 
-LANGUAGE_CODE = 'ru-ru'
+LANGUAGE_CODE = 'ru-RU'
 
 TIME_ZONE = 'Europe/Moscow'
 
