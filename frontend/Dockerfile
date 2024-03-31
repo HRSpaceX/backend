@@ -3,10 +3,10 @@
 FROM node:18.13.0 as build
 WORKDIR /app
 COPY package*.json ./
-RUN npm install
+# RUN npm install
+RUN npm install --only=production && npm cache clean --force && npm install -g typescript
 COPY . ./
 RUN npm run build
 CMD cp -r build result_build
-
 
 # RUN npm install --only=production && npm cache clean --force && npm install -g typescript
