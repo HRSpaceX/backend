@@ -1,4 +1,4 @@
-FROM node as build
+FROM node
 
 WORKDIR /app
 
@@ -8,11 +8,14 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build
+RUN npm run dev
 
 EXPOSE 3000
 
-CMD ["node", "app.js"]
+CMD cp -r dev result_build
+
+
+# CMD ["node", "app.js"]
 
 
 # build env
