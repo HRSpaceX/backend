@@ -1,19 +1,28 @@
-FROM node
+FROM node:18.13.0 as src
 
 WORKDIR /app
 
-COPY package.json /app
+COPY package*.json ./
 
 RUN npm install
 
 COPY . .
 
-RUN npm run dev -- --host
-# RUN npm run dev
+RUN npm run src
 
-EXPOSE 3000
+CMD cp -r src result_build
 
-CMD cp -r dev result_build
+
+# FROM node:13.12.0-alpine as build
+# WORKDIR /app
+# COPY package*.json ./
+# RUN npm install
+# COPY . ./
+# RUN npm run build
+# CMD cp -r build result_build
+
+
+
 
 
 # CMD ["node", "app.js"]
