@@ -1,4 +1,4 @@
-FROM node
+FROM node as build
 
 WORKDIR /app
 
@@ -8,30 +8,11 @@ RUN npm install
 
 COPY . .
 
+RUN npm run build
+
 EXPOSE 3000
 
 CMD ["node", "app.js"]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # build env
