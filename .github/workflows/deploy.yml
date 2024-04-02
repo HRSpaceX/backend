@@ -108,3 +108,7 @@ jobs:
           sudo docker compose exec -T backend python manage.py makemigrations
           sudo docker compose exec -T backend python manage.py migrate
           sudo docker compose exec -T backend python manage.py collectstatic --no-input
+          sudo docker compose exec -T backend python manage.py upload_to_db City
+          sudo docker compose exec -T backend python manage.py add_to_db cities.csv City
+
+
